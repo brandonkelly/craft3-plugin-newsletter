@@ -82,7 +82,7 @@ class Newsletter extends Plugin
         self::$plugin = $this;
 
         // Add in our Twig extensions
-        Craft::$app->view->twig->addExtension(new NewsletterTwigExtension());
+        Craft::$app->view->registerTwigExtension(new NewsletterTwigExtension());
 
         // Register our site routes
         Event::on(
